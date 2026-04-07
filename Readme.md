@@ -19,3 +19,20 @@ GROUP BY
 category
 limit 10;
 ```
+
+**Query 3 Screenshot***
+![Query 3 Screenshot](photos/query3.png)
+
+SQL Code Created below
+```
+SELECT distinct(fulfilment),
+count("order id") as "Number of Orders", 
+sum("qty") as "Items sold", 
+sum("amount") as "Revenue"
+FROM "output_db"."raw"
+WHERE "status" != 'Cancelled' and "order id" != 'Pending'
+GROUP by
+fulfilment
+Order by "Revenue" DESC
+limit 10;
+```
