@@ -1,5 +1,6 @@
-**Readme of Hands on L11** 
+# Readme of Hands on L11
 
+**Cloudwatch Screenshot located below**
 [Cloudwatch Screenshot](photos/cloudwatch-crawler.png)
 
 **Query 1 Screenshot**
@@ -8,6 +9,8 @@ SQL Code Created below
 ```
 SELECT * FROM "output_db"."raw" limit 10;
 ```
+<br>
+
 **Query 2 Screenshot**
 ![Query 2 Screenshot](photos/query2.png)
 SQL Code Created below
@@ -19,6 +22,7 @@ GROUP BY
 category
 limit 10;
 ```
+<br>
 
 **Query 3 Screenshot***
 ![Query 3 Screenshot](photos/query3.png)
@@ -36,3 +40,6 @@ fulfilment
 Order by "Revenue" DESC
 limit 10;
 ```
+<br>
+
+
