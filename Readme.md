@@ -61,9 +61,9 @@ limit 10;
 **Query 5**
 
 **Screenshot for Query 5 
+![Query 5 Screenshot](photos/query5.png)
 
-
-
+SQL Code created below (Co-pilot assisted)
 ```
 SELECT category, sku, "Number of Orders", "Total Revenue"
 FROM (
