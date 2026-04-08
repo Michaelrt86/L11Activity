@@ -56,3 +56,32 @@ GROUP by SUBSTRING("date", 1, 2)
 Order by month ASC
 limit 10;
 ```
+<br>
+
+**Query 5**
+
+**Screenshot for Query 5 
+
+
+
+```
+SELECT category, sku, "Number of Orders", "Total Revenue"
+FROM (
+    SELECT 
+        category, 
+        sku, 
+        COUNT("order id") AS "Number of Orders",
+        SUM("amount") AS "Total Revenue",
+        ROW_NUMBER() OVER (
+            PARTITION BY category 
+            ORDER BY SUM("amount") DESC
+        ) AS rn
+    FROM "output_db"."raw"
+    WHERE "status" != 'Cancelled' 
+      AND "status" != 'Pending' 
+      AND qty >= 1
+    GROUP BY sku, category
+) ranked_skus
+WHERE rn <= 5
+ORDER BY "Total Revenue" DESC;
+```
