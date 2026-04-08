@@ -1,5 +1,9 @@
 # Readme of Hands on L11
 
+**Setting up Crawler**
+![Crawler Screenshot](photos/Crawler_runs.png)
+Setting up the crawler was not the hardest thing to do when I had to go through set the properties, use the S3 data source previously created that had the CSV data inputted. We then chose the role created through the IAM process, set the target database then set the Crawler to be scheduled "on demand". After that we were able to finish and create our Crawler!  
+
 **Cloudwatch Screenshot located below**
 ![Cloudwatch Screenshot](photos/cloudwatch-crawler.png)
 
